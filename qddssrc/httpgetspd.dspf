@@ -1,0 +1,92 @@
+     A                                      INDARA
+     A                                      CA03(03)
+     A          R HEADER
+     A                                  1  2SYSNAME
+     A                                  1 21'QSYS2.HTTP_GET vs. HTTP_STRING (HT-
+     A                                      TPAPI)'
+     A                                      COLOR(WHT)
+     A                                  1 70DATE(*YY)
+     A                                      EDTCDE(Y)
+     A            PGMNAME       10   O  2  2
+     A                                  2 71TIME
+     A          R LOC_FMT                   OVERLAY
+     A                                  4  2'Datos de localización:'            
+     A                                      COLOR(BLU)
+     A                                  6  3'Nombre. . . . :'                   
+     A                                      COLOR(WHT)
+     A                                  6 44'Latitud. . . . . :'                
+     A                                      COLOR(WHT)
+     A                                  7  3'País. . . . . :'                   
+     A                                      COLOR(WHT)
+     A                                  7 44'Longitud.. . . . :'                
+     A                                      COLOR(WHT)
+     A                                  8  3'Región. . . . :'                   
+     A                                      COLOR(WHT)
+     A                                  8 44'Hora local . . . :'                
+     A                                      COLOR(WHT)
+     A                                  9  3'Zona horaria  :'                   
+     A                                      COLOR(WHT)
+     A            NAME           9   O  6 19
+     A            LAT            9   O  6 63
+     A            COUNTRY        9   O  7 19
+     A            LON            9   O  7 63
+     A            REGION         9   O  8 19
+     A            LOCALTIME     16   O  8 63
+     A            TIMEZONE      20   O  9 19
+     A          R CURR_FMT                  OVERLAY
+     A                                 12  2'Tiempo Actual:'                    
+     A                                      COLOR(BLU)
+     A                                 14  3'Temperatura . :'                   
+     A                                      COLOR(WHT)
+     A                                 14 44'Humedad. . . . . :'                
+     A                                      COLOR(WHT)
+     A                                 15  3'Sensación . . :'                   
+     A                                      COLOR(WHT)
+     A                                 15 44'Precipitaciones. :'                
+     A                                      COLOR(WHT)
+     A                                 16 44'Presión . . . .  :'                
+     A                                      COLOR(WHT)
+     A                                 16  3'Nubosidad . . :'                   
+     A                                      COLOR(WHT)
+     A                                 17 44'Vel. viento. . . :'                
+     A                                      COLOR(WHT)
+     A                                 17  3'Visibilidad . :'                   
+     A                                      COLOR(WHT)
+     A                                 18 44'Dir. Viento. . . :'                
+     A                                      COLOR(WHT)
+     A                                 18  3'Índice uv . . :'                   
+     A                                      COLOR(WHT)
+     A                                 19  3'Descrip. 1. . :'
+     A                                      COLOR(WHT)
+     A                                 19 44'Ángulo viento. . :'                
+     A                                      COLOR(WHT)
+     A  40                             20  3'Descrip. 2. . :'
+     A                                      COLOR(WHT)
+     A  41                             21  3'Descrip. 3. . :'
+     A                                      COLOR(WHT)
+     A            TEMP           3  0O 14 19EDTCDE(Z)
+     A            HUMIDITY       2  0O 14 65EDTCDE(Z)
+     A            FEELSLIKE      3  0O 15 19EDTCDE(Z)
+     A            PRECIP         3  1O 15 63EDTCDE(1)
+     A            PRESSURE       4  0O 16 63EDTCDE(Z)
+     A            CLOUDCOVER     3  0O 16 19EDTCDE(1)
+     A            WIND_SPEED     3  0O 17 64EDTCDE(Z)
+     A            VISIBILITY     3  0O 17 19EDTCDE(Z)
+     A            WIND_DIR       3   O 18 64
+     A            UV_INDEX       3  0O 18 19EDTCDE(Z)
+     A            DESC1         20   O 19 19
+     A            WINDDEGREE     3  0O 19 64EDTCDE(Z)
+     A  40        DESC2         20     20 19
+     A  41        DESC3         20     21 19
+     A          R FKEYS                      OVERLAY
+     A                                 23  2'F3=Salir'                          
+     A                                      COLOR(BLU)
+     A*%%RS+<record-sequences>
+     A*%%RS+ <sequence name="HTTP Get Demo">
+     A*%%RS+  <device type="display" width="80" height="24" />
+     A*%%RS+  <record-write record-format="HEADER" />
+     A*%%RS+  <record-write record-format="LOC_FMT" />
+     A*%%RS+  <record-write record-format="CURR_FMT" />
+     A*%%RS+  <record-write record-format="FKEYS" />
+     A*%%RS+ </sequence>
+     A*%%RS </record-sequences>   
