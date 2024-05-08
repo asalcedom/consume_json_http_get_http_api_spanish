@@ -1,4 +1,4 @@
-## Consume a REST Service from ILE RPG
+## Consumo de un servicio REST con ILE RPG
 
 Con estos programas de ejemplo podrá aprender cómo consumir un servicio REST, que devuelve un JSON, con la función SQL de IBM HTTP_GET y, en otro programa, lo mismo pero con la utilidad HTTP API de Scott Klement. 
 
